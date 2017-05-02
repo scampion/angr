@@ -116,7 +116,7 @@ class PathHistory(object):
             self._state_strong_ref = state
 
     def _record_run(self, run):
-        self._runstr = str(run)
+        self._runstr = run
 
     @property
     def state(self):
@@ -131,7 +131,8 @@ class PathHistory(object):
         Demotes this PathHistory node, causing it to convert references to the state
         to weakrefs.
         """
-        self._state_strong_ref = None
+        #self._state_strong_ref = None
+        return
 
     #
     # Some GC-dependent pass-throughts to the state
